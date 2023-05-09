@@ -2,15 +2,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { addBook } from '../redux/books/booksSlice';
 
-function AddButton() {
+function AddButton({ book }) {
   const dispatch = useDispatch();
   const { books } = useSelector((state) => state.books);
+  const { title, author, category } = book;
   const handleClick = () => {
-    // Get book values from form
-    const title = document.querySelector('#book-name').value;
-    const author = document.querySelector('#book-author').value;
-    const category = document.querySelector('#book-category').value;
-
     // Update item_key
     let key = books[books.length - 1].item_id.split('');
     const id = key[key.length - 1];
@@ -26,6 +22,7 @@ function AddButton() {
       category,
     };
 
+    // Add book to the store and update UI
     if (title !== '' && author !== '' && category !== '') {
       dispatch(addBook({ book }));
     } else {
@@ -46,12 +43,12 @@ function AddButton() {
   );
 }
 
-AddButton.propsTypes = {
-  props: PropTypes.shape({
+AddButton.propTypes = {
+  book: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default AddButton;
