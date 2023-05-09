@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import AddButton from './AddButton';
 
 function AddBook() {
@@ -7,10 +7,6 @@ function AddBook() {
     author: '',
     category: '',
   });
-
-  useEffect(() => {
-    console.log(book);
-  }, [setBook]);
 
   return (
     <form className="add-book-form">
