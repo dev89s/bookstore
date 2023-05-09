@@ -17,7 +17,7 @@ function BooksPage() {
       bookName: 'Dune',
       author: 'Frank Herbert',
       completion: '8%',
-      currentChapter: 'Chapter 3: "A Lesson Learn"',
+      currentChapter: 'Chapter 3: "A Lesson Learned"',
     },
     {
       id: 3,
