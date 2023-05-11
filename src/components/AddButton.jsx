@@ -1,19 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, createBookApi } from '../redux/books/booksSlice';
 
 function AddButton({ book }) {
   const dispatch = useDispatch();
-  const { books } = useSelector((state) => state.books);
+  const { books } = useSelector((state) => state.booksState);
   const { title, author, category } = book;
+  const titleInput = document.querySelector('#book-name');
+  const authorInput = document.querySelector('#book-author');
+  const categoryInput = document.querySelector('#book-category');
   const handleClick = () => {
     // Update item_key
-    let key = books[books.length - 1].item_id.split('');
-    const id = key[key.length - 1];
-    key.pop();
-    key.push(Number(id) + 1);
-    key = key.join('');
-
+    let key;
+    if (books.length === 0) {
+      key = 'item1';
+    } else {
+      key = books[books.length - 1].item_id.split('');
+      const id = key[key.length - 1];
+      key.pop();
+      key.push(Number(id) + 1);
+      key = key.join('');
+    }
     // create book item
     const book = {
       item_id: key,
@@ -24,7 +31,11 @@ function AddButton({ book }) {
 
     // Add book to the store and update UI
     if (title !== '' && author !== '' && category !== '') {
+      dispatch(createBookApi(book));
       dispatch(addBook({ book }));
+      titleInput.value = '';
+      authorInput.value = '';
+      categoryInput.value = '';
     } else {
       const error = document.querySelector('.error');
       error.style.display = 'block';
