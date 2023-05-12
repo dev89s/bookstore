@@ -46,6 +46,7 @@ function AddButton({ book }) {
   };
   return (
     <button
+      className="add-button form-input details-font"
       type="button"
       onClick={handleClick}
     >
