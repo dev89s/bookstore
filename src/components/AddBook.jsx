@@ -11,6 +11,7 @@ function AddBook() {
   return (
     <form className="add-book-form">
       <h2 className="book-form-header">ADD NEW BOOK</h2>
+      <span className="error">Please enter all three feilds</span>
       <div className="book-form-inputs">
         <input
           className="form-input book-name-input"
@@ -65,7 +66,6 @@ function AddBook() {
           Add Book
         </AddButton>
       </div>
-      <span className="error">Please enter all three feilds</span>
     </form>
   );
 }

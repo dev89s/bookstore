@@ -14,6 +14,7 @@ body {
 /* ---- page styling ---- */
 main {
   background-color: #f5f6fa;
+  min-height: 90vh;
 }
 
 .books-page,
@@ -39,7 +40,7 @@ main {
   margin: auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 47px;
 }
 
 .site-title .link {
@@ -51,11 +52,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 41px;
   padding: 0;
 }
 
 .navlist .link {
+  font-size: 13px;
   text-decoration: none;
   color: #121212;
 }
@@ -157,6 +159,7 @@ main {
   padding: 0 17px;
   font-size: 16px;
   border: 1px solid #e8e8e8;
+  box-sizing: border-box;
 }
 
 .book-name-input {
@@ -178,5 +181,38 @@ main {
   width: 220px;
   color: #fff;
   border-radius: 3px;
-  background-color: red;
+  background-color: rgb(200, 0, 0);
+  margin-block: 10px;
+  padding-block: 3px;
+  padding-inline: 5px;
+}
+
+@media screen and (max-width: 80rem) {
+
+  .books-page,
+  .category-page {
+    padding-inline: 32px;
+  }
+
+  .nav-container {
+    padding-inline: 32px;
+  }
+
+  .form-input {
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .book-form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .add-book-form {
+    height: auto;
+  }
 }
