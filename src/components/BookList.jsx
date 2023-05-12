@@ -18,21 +18,21 @@ function BookList() {
 
   if (isLoading) {
     return (
-      <>
+      <div className="book-list">
         <h2>List is loading...</h2>
         {books.map((book) => (
           <BookState key={book.item_id} bookDetails={book} />
         ))}
-      </>
+      </div>
     );
   }
   return (
-    <>
-      <h2>This is the BookList page</h2>
+    <div className="book-list">
+      {books.length === 0 ? <h2>Book list is empty</h2> : null}
       {books.map((book) => (
         <BookState key={book.item_id} bookDetails={book} />
       ))}
-    </>
+    </div>
   );
 }
 

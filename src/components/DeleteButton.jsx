@@ -6,13 +6,14 @@ function DeleteButton({ itemId }) {
   const dispatch = useDispatch();
   return (
     <button
+      className="book-state-buttons-1 details-font"
       type="button"
       onClick={() => {
         dispatch(deleteBookApi(itemId));
         dispatch(removeBook({ item_id: itemId }));
       }}
     >
-      Delete
+      Remove
     </button>
   );
 }
