@@ -75,13 +75,12 @@ main {
 
 .book-state {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
   border: 1px solid #e8e8e8;
   padding: 32px 27px;
 }
-
-.book-details-container {}
 
 .book-category {
   margin: 0 0 4px;
@@ -104,6 +103,12 @@ main {
   font-size: 14px;
 }
 
+.book-state-buttons-1 {
+  border: none;
+  background-color: transparent;
+  color: #4386bf;
+}
+
 .book-state-btn-list {
   display: flex;
   align-items: center;
@@ -115,28 +120,64 @@ main {
   border: solid 1px #e8e8e8;
 }
 
-.book-state-buttons-1 {
-  border: none;
-  background-color: transparent;
-  color: #4386bf;
+.book-details-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.oval {
+  height: 68px;
+  width: 68px;
+}
+
+.percent-header {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.percent-completed {
   font-size: 14px;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.line-1 {
+  height: 70px;
+  border: 1px solid #e8e8e8;
+  margin-inline: 30px;
+}
+
+.chapter-header {
+  font-size: 13px;
+  opacity: 0.5;
   font-weight: 300;
-  padding: 0;
-  cursor: pointer;
+  color: #121212;
+  margin: 0;
+  margin-bottom: 7px;
 }
 
-.book-completion-status {
-  border: 1px solid #000;
+.chapter-name {
+  font-weight: 300;
+  color: #121212;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
-.book-state-update {
-  border: 1px solid #000;
+.progress-update-btn {
+  border: none;
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 8px 22px;
 }
 
-/* ---- add book styling ---- */
-
+/* ---- add book form styling ---- */
 .add-book-form {
-  height: 140px;
+  height: 150px;
 }
 
 .book-form-header {
@@ -188,7 +229,6 @@ main {
 }
 
 @media screen and (max-width: 80rem) {
-
   .books-page,
   .category-page {
     padding-inline: 32px;
