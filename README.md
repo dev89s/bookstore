@@ -35,7 +35,7 @@
 <br>
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Bookstire <a id="about-project"></a>
+# 📖 Bookstore <a id="about-project"></a>
 
 **Bookstore Project** is a Single Page App (SPA) implemeted using React and Redux that has 2 pages:
 1. A homepage that shows the list of books and their status in a visual manner
