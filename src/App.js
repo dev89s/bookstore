@@ -1,5 +1,6 @@
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from 'react-router-dom';
 import Root from './routes/Root';
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root />,
     children: [
-      { index: true, element: <BooksPage /> },
+      { index: true, element: <Navigate to="/books" /> },
       {
         path: '/books',
         element: <BooksPage />,

@@ -62,6 +62,11 @@ main {
   color: #121212;
 }
 
+.link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .navlist li {
   list-style: none;
 }
