@@ -82,7 +82,7 @@
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-- An implementation of this portfolio is live on [Render.com website](#) (to be updated)
+- An implementation of this portfolio is live on [Render.com website](https://math-magicians-blyx.onrender.com) (to be updated)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
